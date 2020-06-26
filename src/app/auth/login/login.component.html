@@ -1,0 +1,68 @@
+
+    <!-- APP WRAPPER -->
+    <div class="app app-fh">
+        <!-- START APP CONTAINER -->
+        <div class="app-container" style="background: url(../../../assets/images/background/bg-1.jpg) center center no-repeat fixed">
+            <div class="app-login-box">
+            
+               <div class="app-login-box-title">
+                <div class="title" style="font-size: 40px;padding-top: 20px;padding-bottom: 20px;">Login</div>
+                  <div class="subtitle">Sign in to your account</div>
+              </div> 
+                <div class="app-login-box-container" style="width: 60%;">
+                     <div class="alert alert-success">{{message}}</div>
+                    <form #loginform="ngForm" (ngSubmit)="submitform(loginform)" id="addForm">
+                        <div class="form-group">
+                        	<label>Roll</label>
+                            <input type="text" class="form-control" name="roles" placeholder="roles" ngModel>
+                        </div>
+                        <div class="form-group">
+                        	<label>User Id</label>
+                            <input type="text" class="form-control" name="userid" placeholder="User Id" ngModel>
+                        </div>
+                        <div class="form-group">
+                        	<label>Password</label>
+                            <input type="password" class="form-control" name="password" placeholder="Password" ngModel>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-6 col-xs-6">
+                                    <div class="app-checkbox">
+                                        <label>
+                                            <input type="checkbox" name="app-checkbox-1" value="0" > Remember me</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-xs-6">
+                                    <button class="btn btn-facebook btn-block" type="submit">Sign In</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+  
+               <div class="app-login-box-footer">&copy;  2002-2017 Trustling institute Inc.</div>
+            </div>
+        </div>
+        <!-- END APP CONTAINER -->
+    </div>
+
+    <!-- <button 
+    class="btn btn-outline-warning" 
+    (click)="login(Role.User)">Login as User</button>
+  
+  <button 
+    class="btn btn-outline-danger" 
+    (click)="login(Role.Admin)">Login as Admin</button> -->
+
+
+    <button 
+    class="btn btn-outline-danger" 
+    (click)="login(Role.checker)">Login as checker</button>
+
+    <button 
+    class="btn btn-outline-danger" 
+    (click)="login(Role.makers)">Login as makers</button>
+
+    <button 
+    class="btn btn-outline-danger" 
+    (click)="login(Role.test)">Login as test</button>
